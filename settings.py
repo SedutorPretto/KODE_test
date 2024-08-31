@@ -22,13 +22,13 @@ def get_settings(path: str):
 
     return Settings(
         db_postgres=DatabaseConfig(
-            database=env.str('DB_NAME'),
-            db_user=env.str('DB_USER'),
-            db_password=env.str('DB_PASSWORD'),
-            db_host=env.str('DB_HOST'),
-            db_port=env.int('DB_PORT')
+            database=env.str("DB_NAME"),
+            db_user=env.str("DB_USER"),
+            db_password=env.str("DB_PASSWORD"),
+            db_host=env.str("DB_HOST"),
+            db_port=env.int("DB_PORT"),
         )
     )
 
 
-settings = get_settings('.env')
+settings = get_settings(".env")

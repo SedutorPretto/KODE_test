@@ -1,5 +1,4 @@
 from pydantic import BaseModel
-from sqlalchemy import Text
 
 
 class NoteBase(BaseModel):
