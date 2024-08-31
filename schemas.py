@@ -1,8 +1,8 @@
 from pydantic import BaseModel
+from sqlalchemy import Text
 
 
 class NoteBase(BaseModel):
-    note_id: int
     title: str
     content: str
 
@@ -13,7 +13,6 @@ class NoteCreate(NoteBase):
 
 class Note(NoteBase):
     owner_id: int
-    owner: str
 
-    # class Config:
-    #     orm_mode = True
+    class Config:
+        from_attributes = True
